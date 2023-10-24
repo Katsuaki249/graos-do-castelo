@@ -3,10 +3,10 @@ import { View, Text } from 'react-native'
 
 import styles from './styles'
 
-export default function Acount() {
+export default function Store() {
   return(
     <View style={styles.container}>
-      <Text style={styles.text}>Acount</Text>
+      <Text style={styles.text}>Loja</Text>
     </View>
   )
 }

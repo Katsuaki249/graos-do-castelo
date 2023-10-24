@@ -1,20 +1,25 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import Home from './screens/Home'
-import Store from './screens/Store'
-import Cart from './screens/Cart'
-import Acount from './screens/Acount'
+import Home from '../screens/Home'
+import Store from '../screens/Store'
+import Cart from '../screens/Cart'
+
+import { getCart } from '../screens/Cart'
 
 import { Entypo } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator()
 
-export default function Routes() {
+
+export default function TabRoutes() {
+  const cart = getCart()
+
   return(
     <Tab.Navigator
-      initialRouteName='Home'
+      initialRouteName='home'
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: '#397E01',
         tabBarInactiveTintColor: '#D9D9D9',
         tabBarStyle:{
@@ -57,22 +62,13 @@ export default function Routes() {
           tabBarIcon: ({ size, color }) => (
             <Entypo name='shopping-cart' size={size} color={color} />
           ),
-          tabBarBadge: 3,
+          tabBarBadge: [cart],
           tabBarBadgeStyle: {
             backgroundColor: '#FF5800'
           }
         }}
       />
 
-      <Tab.Screen
-        name='Conta'
-        component={Acount}
-        options={{
-          tabBarIcon: ({ size, color }) => (
-            <Entypo name='user' size={size} color={color} />
-          )
-        }}
-      />
     </Tab.Navigator>
   )
 }

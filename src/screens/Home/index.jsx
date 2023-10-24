@@ -9,7 +9,6 @@ export default function Home() {
   return(
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.text}>Home</Text>
         <Banner />
       </View>
     </ScrollView>

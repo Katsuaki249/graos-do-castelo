@@ -1,10 +1,8 @@
 import React from 'react'
-import { View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from './screens/Home'
 import Store from './screens/Store'
-import Category from './screens/Category'
 import Cart from './screens/Cart'
 import Acount from './screens/Acount'
 
@@ -48,30 +46,6 @@ export default function Routes() {
         options={{
           tabBarIcon: ({ size, color }) => (
             <Entypo name='shopping-basket' size={size} color={color} />
-          )
-        }}
-      />
-
-      <Tab.Screen
-        name='Categoria'
-        component={Category}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ size, focused }) => (
-            <View
-              style={{
-                width: 60,
-                height: 60,
-                borderRadius: 30,
-                position: 'absolute',
-                top: -20,
-                backgroundColor: focused ? '#FF5800' : '#D9D9D9', // Define a cor ativa e inativa
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <Entypo name="grid" size={size + 8} color={'#FFFFFF'} />
-            </View>
           )
         }}
       />

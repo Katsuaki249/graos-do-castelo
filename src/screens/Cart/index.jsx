@@ -17,7 +17,7 @@ export function getCart() {
 export default function Cart() {
   return(
     <View style={styles.container}>
-      <Text style={styles.text}>Carrinho de compras</Text>
+      <Text style={styles.text}>Vazio</Text>
     </View>
   )
 }

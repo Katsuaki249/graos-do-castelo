@@ -7,7 +7,7 @@ const Stack = createStackNavigator()
 
 const getIsSignedIn = () => {
   // Lógica que valida o login
-  return false
+  return true
 }
 
 export default function StackRoutes() {
@@ -15,7 +15,7 @@ export default function StackRoutes() {
   const isSignedIn = getIsSignedIn()
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       {isSignedIn ? (
         <>
           <Stack.Screen

@@ -3,6 +3,7 @@ import { Feather } from '@expo/vector-icons'
 
 import TabRoutes from "./tab.routes";
 import StackRoutes from "./stack.routes";
+import Config from "../screens/Config";
 
 const Drawer = createDrawerNavigator()
 
@@ -22,7 +23,15 @@ export default function DrawerRoutes() {
         component={StackRoutes}
         options={{
           drawerIcon: ({color, size}) => <Feather name="user" color={color} size={size} />,
-          drawerLabel: 'início'
+          drawerLabel: 'Conta'
+        }}
+      />
+      <Drawer.Screen
+        name="config"
+        component={Config}
+        options={{
+          drawerIcon: ({color, size}) => <Feather name="settings" color={color} size={size} />,
+          drawerLabel: 'Configurações'
         }}
       />
     </Drawer.Navigator>

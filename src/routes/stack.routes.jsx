@@ -1,36 +1,45 @@
+import React, { useState, useCallback } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Acount from '../screens/Acount'
 import Login from '../screens/Login'
+import Register from '../screens/Register'
 
 const Stack = createStackNavigator()
 
-const getIsSignedIn = () => {
-  // Lógica que valida o login
-  return true
-}
-
 export default function StackRoutes() {
 
-  const isSignedIn = getIsSignedIn()
+  const [ meuEstado, setMeuEstado ] = useState(false)
+
+  const atualizarEstado = useCallback((novaEstado) => {
+    setMeuEstado(novaEstado);
+  }, []);
+
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {isSignedIn ? (
+      {meuEstado ? (
         <>
           <Stack.Screen
-            name='acount'
-            component={Acount}
+            name='userdata'
+            options={{title: 'userdata'}}
+            children={() => <Acount atualizarEstado={atualizarEstado} />}
           />
         </>
       ) : (
         <>
           <Stack.Screen
             name='login'
-            component={Login}
+            options={{title: 'login'}}
+            children={() => <Login atualizarEstado={atualizarEstado } />}
           />
         </>
       )}
+
+      <Stack.Screen
+        name='register'
+        component={Register}
+      />
     </Stack.Navigator>
   )
 }

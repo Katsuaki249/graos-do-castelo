@@ -28,7 +28,7 @@ export default function TabRoutes() {
           bottom: 25,
           left: 20,
           right: 20,
-          elevation: 0,
+          elevation: 3,
           backgroundColor: '#FFFFFF',
           borderRadius: 15,
           height: 90

@@ -40,6 +40,24 @@ const data = [
     image:
       'https://images.unsplash.com/photo-1622542086073-dcdc3350cc2b?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
+  {
+    id: 5,
+    category: 'Cereais',
+    name: 'Granola',
+    description: 'Granola',
+    price: 22.99,
+    image:
+      'https://images.unsplash.com/photo-1622542086073-dcdc3350cc2b?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    id: 6,
+    category: 'Cereais',
+    name: 'Granola',
+    description: 'Granola',
+    price: 22.99,
+    image:
+      'https://images.unsplash.com/photo-1622542086073-dcdc3350cc2b?auto=format&fit=crop&q=80&w=2080&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
 ]
 
 export const numColumns = 2

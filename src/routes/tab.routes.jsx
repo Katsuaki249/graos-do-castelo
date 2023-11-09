@@ -36,7 +36,7 @@ export default function TabRoutes() {
       }}
     >
       <Tab.Screen
-        name='Início'
+        name='tabhome'
         component={Home}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -46,7 +46,7 @@ export default function TabRoutes() {
       />
 
       <Tab.Screen
-        name='Loja'
+        name='store'
         component={Store}
         options={{
           tabBarIcon: ({ size, color }) => (
@@ -56,7 +56,7 @@ export default function TabRoutes() {
       />
 
       <Tab.Screen
-        name='Carrinho'
+        name='cart'
         component={Cart}
         options={{
           tabBarIcon: ({ size, color }) => (

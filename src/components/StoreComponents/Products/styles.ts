@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-export const Container = styled.View<{ $numColuns: Number }>`
+export const Container = styled.View`
   margin: 8px 8px;
   width: 150px;
   padding: 6px;

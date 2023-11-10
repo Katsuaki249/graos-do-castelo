@@ -7,7 +7,7 @@ import Register from '../screens/Register'
 
 const Stack = createStackNavigator()
 
-export default function StackRoutes() {
+export default function StackRoutes({navigation}) {
 
   const [ meuEstado, setMeuEstado ] = useState(false)
 
@@ -38,7 +38,8 @@ export default function StackRoutes() {
 
       <Stack.Screen
         name='register'
-        component={Register}
+        options={{title: 'register'}}
+        children={() => <Register navigation={navigation} />}
       />
     </Stack.Navigator>
   )

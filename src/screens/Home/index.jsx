@@ -1,17 +1,19 @@
 import React from 'react'
-import { ScrollView, View, Text } from 'react-native'
+import { ScrollView, Text } from 'react-native'
 
 import Carrousel from '../../components/Carrousel'
-
-import styles from './styles'
+import Categories from '../../components/Categories'
+import Footer from '../../components/Footer'
 
 export default function Home({ navigation }) {
   return(
     <ScrollView>
-      <View style={styles.container}>
-        <Carrousel navigation={navigation} />
-        <Text style={{fontSize: 28, fontWeight: 'bold', alignSelf: 'flex-start', paddingLeft: 25, color: '#58626C' }}>Categorias</Text>
-      </View>
+      <Carrousel navigation={navigation} />
+      <Text style={{fontSize: 28, fontWeight: 'bold', alignSelf: 'flex-start', paddingLeft: 25, color: '#58626C' }}>Categorias</Text>
+      <Categories navigation={navigation}/>
+      <Text style={{fontSize: 28, fontWeight: 'bold', alignSelf: 'flex-start', paddingLeft: 25, color: '#58626C' }}>Produtos populares</Text>
+      <Categories />
+      <Footer />
     </ScrollView>
   )
 }

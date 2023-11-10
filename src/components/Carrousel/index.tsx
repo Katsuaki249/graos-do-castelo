@@ -20,11 +20,11 @@ const data = [
   {
     id: 2,
     badge: 'Entregamos até a sua casa',
-    title: 'Preçoes naturais para produtos naturais',
+    title: 'Preços naturais para produtos naturais',
     subtitle: 'Economize enquanto cuida de sua saúde',
     buttonText: 'Faça seu cadastro',
     image: require('../../assets/images/banner-img-2.png'),
-    route: 'register',
+    route: 'acount',
     badgeColor: '#397e01',
     titleColor: '#ff5800',
     subtitleColor: '#ffffff',

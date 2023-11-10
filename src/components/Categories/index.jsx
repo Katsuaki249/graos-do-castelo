@@ -6,30 +6,30 @@ const data = [
   {
     id: 1,
     category: 'Castanhas',
-    image: require('../../assets/images/banner-img-1.jpg'),
+    image: require('../../assets/images/category_1.jpg'),
     route: 'store',
   },
   {
     id: 2,
-    category: 'Ervas',
-    image: require('../../assets/images/banner-img-1.jpg'),
+    category: 'Chás',
+    image: require('../../assets/images/category_2.jpg'),
     route: 'store',
   },
   {
     id: 3,
-    category: 'Chás',
-    image: require('../../assets/images/banner-img-1.jpg'),
+    category: 'Ervas',
+    image: require('../../assets/images/category_3.jpg'),
     route: 'store',
   },
   {
     id: 4,
     category: 'Temperos',
-    image: require('../../assets/images/banner-img-1.jpg'),
+    image: require('../../assets/images/category_4.jpg'),
     route: 'store',
   },
 ]
 
-const Categories = ({ navigation }) => {
+export default Categories = ({ navigation }) => {
   return (
     <FlatList
       data={data}
@@ -40,21 +40,11 @@ const Categories = ({ navigation }) => {
           source={item.image}
           imageStyle={{
             borderRadius: 10,
-            opacity: 0.7,
-            objectFit: 'contain',
+            objectFit: 'cover',
           }}
         >
-          <S.Overlay>
-            <S.BannerBadge>{item.badge}</S.BannerBadge>
-            <S.BannerTitle>{item.title}</S.BannerTitle>
-            <S.BannerSubtitle>{item.subtitle}</S.BannerSubtitle>
-            <S.Button
-              onPress={() => {
-                navigation.navigate(item.route)
-              }}
-            >
-              <S.ButtonText>{item.buttonText}</S.ButtonText>
-            </S.Button>
+          <S.Overlay onPress={() => navigation.navigate(item.route)}>
+          <S.Category>{item.category}</S.Category>
           </S.Overlay>
         </S.BannerBackground>
       )}
@@ -62,5 +52,3 @@ const Categories = ({ navigation }) => {
     />
   )
 }
-
-export default Carousel

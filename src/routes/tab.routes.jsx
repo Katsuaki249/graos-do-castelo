@@ -7,7 +7,7 @@ import Cart from '../screens/Cart'
 
 import { getCart } from '../screens/Cart'
 
-import { Entypo } from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator()
 
@@ -23,15 +23,16 @@ export default function TabRoutes() {
         tabBarActiveTintColor: '#397E01',
         tabBarInactiveTintColor: '#D9D9D9',
         tabBarStyle:{
-          paddingTop: 15,
           position: 'absolute',
+          backgroundColor: '#FFFFFF',
+          borderTopWidth: 0,
+          paddingTop: 15,
           bottom: 25,
           left: 20,
           right: 20,
           elevation: 3,
-          backgroundColor: '#FFFFFF',
           borderRadius: 15,
-          height: 90
+          height: 75
         }
       }}
     >
@@ -39,8 +40,10 @@ export default function TabRoutes() {
         name='tabhome'
         component={Home}
         options={{
+          headerShown: false,
+          tabBarLabel: '',
           tabBarIcon: ({ size, color }) => (
-            <Entypo name='home' size={size} color={color} />
+            <Feather name='home' size={size} color={color} />
           )
         }}
       />
@@ -49,8 +52,9 @@ export default function TabRoutes() {
         name='store'
         component={Store}
         options={{
+          tabBarLabel: '',
           tabBarIcon: ({ size, color }) => (
-            <Entypo name='shopping-basket' size={size} color={color} />
+            <Feather name='shopping-bag' size={size} color={color} />
           )
         }}
       />
@@ -59,8 +63,9 @@ export default function TabRoutes() {
         name='cart'
         component={Cart}
         options={{
+          tabBarLabel: '',
           tabBarIcon: ({ size, color }) => (
-            <Entypo name='shopping-cart' size={size} color={color} />
+            <Feather name='shopping-cart' size={size} color={color} />
           ),
           tabBarBadge: [cart],
           tabBarBadgeStyle: {

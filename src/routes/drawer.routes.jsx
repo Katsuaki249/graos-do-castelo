@@ -3,6 +3,7 @@ import { Feather } from '@expo/vector-icons'
 
 import TabRoutes from "./tab.routes";
 import StackRoutes from "./stack.routes";
+import About from '../screens/About'
 import Config from "../screens/Config";
 
 const Drawer = createDrawerNavigator()
@@ -16,6 +17,14 @@ export default function DrawerRoutes() {
         options={{
           drawerIcon: ({color, size}) => <Feather name="home" color={color} size={size} />,
           drawerLabel: 'início'
+        }}
+      />
+      <Drawer.Screen
+        name="about"
+        component={About}
+        options={{
+          drawerIcon: ({color, size}) => <Feather name="info" color={color} size={size} />,
+          drawerLabel: 'Sobre nós'
         }}
       />
       <Drawer.Screen

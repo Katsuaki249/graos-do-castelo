@@ -5,53 +5,24 @@ const screenWidth = Math.round(Dimensions.get('window').width)
 
 export const BannerBackground = styled.ImageBackground`
   margin-top: 20px;
-  width: ${screenWidth - 50}px;
-  height: 450px;
+  width: ${screenWidth / 2 - 50}px;
+  height: 200px;
   margin: 25px;
   overflow: hidden;
 `
 
-export const Overlay = styled.View`
+export const Overlay = styled.TouchableOpacity`
   flex: 1;
-  background-color: rgba(250, 250, 250, 0.1);
-  justify-content: center;
+  justify-content: flex-end;
   border-radius: 10px;
-  padding: 25px;
+  padding: 20px;
 `
 
-export const BannerBadge = styled.Text`
-  font-size: 12px;
+export const Category = styled.Text`
+  background: #ff5800;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
-  background-color: #ff5800;
-  padding: 2px 20px;
-  border-radius: 5px;
-  align-self: flex-start;
-  margin-bottom: 20px;
-`
-
-export const BannerTitle = styled.Text`
-  font-size: 34px;
-  font-weight: bold;
-  color: #397e01;
-`
-
-export const BannerSubtitle = styled.Text`
-  font-size: 22px;
-  color: #262626;
-  font-weight: bold;
-  margin-top: 5px;
-`
-
-export const Button = styled.TouchableOpacity`
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #397e01;
-  border-radius: 8px;
-  align-self: flex-start;
-`
-
-export const ButtonText = styled.Text`
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
 `

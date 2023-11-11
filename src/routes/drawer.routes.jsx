@@ -10,7 +10,12 @@ const Drawer = createDrawerNavigator()
 
 export default function DrawerRoutes() {
   return(
-    <Drawer.Navigator screenOptions={{ title: '' }}>
+    <Drawer.Navigator
+      screenOptions={{
+        title: '',
+        drawerActiveBackgroundColor: '#ade97c56',
+        drawerActiveTintColor: '#397E01',
+      }}>
       <Drawer.Screen
         name="home"
         component={TabRoutes}

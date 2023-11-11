@@ -36,9 +36,14 @@ export const Paragraph = styled.Text`
   color: #58626c;
   margin-bottom: 25px;
 `
-export const Icon = styled.View`
+export const IconTextContainer = styled.View`
   flex: 1;
   flex-direction: row;
+  align-items: center;
   padding-top: 10px;
   padding-left: 24px;
+`
+export const IconText = styled.Text`
+  font-size: 24px;
+  color: #ff5800;
 `

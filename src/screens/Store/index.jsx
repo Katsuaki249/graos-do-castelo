@@ -1,7 +1,8 @@
 import { FlatList } from 'react-native-gesture-handler'
 import { Products } from '../../components/StoreComponents/Products'
 
-import { Container } from './styles'
+import { Container, ListContainer } from './styles'
+import Footer from '../../components/Footer'
 
 const data = [
   {
@@ -82,13 +83,16 @@ export default function Store() {
 
   return(
     <Container>
-      <FlatList
-        keyExtractor={(item) => item.id}
-        data={data}
-        showsVerticalScrollIndicator={false}
-        renderItem={({ item }) => <Products {...item} />}
-        numColumns={numColumns}
-      />
+      <ListContainer>
+        <FlatList
+          keyExtractor={(item) => item.id}
+          data={data}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item }) => <Products {...item} />}
+          numColumns={numColumns}
+        />
+      </ListContainer>
+      <Footer />
     </Container>
   )
 }

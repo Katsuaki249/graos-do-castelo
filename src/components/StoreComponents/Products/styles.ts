@@ -1,9 +1,12 @@
+import { Dimensions } from 'react-native'
 import styled from 'styled-components/native'
+
+const screenWidth = Math.round(Dimensions.get('window').width)
 
 export const Container = styled.View`
   margin: 8px 8px;
-  width: 150px;
-  padding: 6px;
+  width: ${screenWidth / 2 - 25}px;
+  padding: 8px;
   background-color: #fff;
   border-radius: 8px;
 `
@@ -11,7 +14,7 @@ export const Container = styled.View`
 export const Name = styled.Text`
   align-self: center;
   margin-bottom: 6px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 `
 

@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native'
 import axios from 'axios';
 
+import * as S from './styles'
+import { ScrollView } from 'react-native-gesture-handler';
+
 export default Register = () => {
+
+  const navigation = useNavigation()
+
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [email, setEmail] = useState('');
@@ -26,9 +33,7 @@ export default Register = () => {
   };
 
   const handleSubmit = () => {
-    // Aqui você pode implementar a lógica para submeter os dados do formulário
-    // Por exemplo, enviar os dados para uma API ou realizar ações necessárias
-    // com os dados fornecidos.
+
     console.log('Dados do formulário:');
     console.log('Nome:', nome);
     console.log('Sobrenome:', sobrenome);
@@ -40,32 +45,57 @@ export default Register = () => {
   };
 
   return (
-    <View>
-      <Text>Nome</Text>
-      <TextInput value={nome} onChangeText={setNome} />
+    <ScrollView>
 
-      <Text>Sobrenome</Text>
-      <TextInput value={sobrenome} onChangeText={setSobrenome} />
+      <S.Container>
+        <View>
+          <S.Label>Nome</S.Label>
+          <S.Input value={nome} onChangeText={setNome} />
+        </View>
 
-      <Text>Email</Text>
-      <TextInput value={email} onChangeText={setEmail} />
+        <View>
+          <S.Label>Sobrenome</S.Label>
+          <S.Input value={sobrenome} onChangeText={setSobrenome} />
+        </View>
 
-      <Text>Senha</Text>
-      <TextInput secureTextEntry value={senha} onChangeText={setSenha} />
+        <View>
+          <S.Label>Email</S.Label>
+          <S.Input value={email} onChangeText={setEmail} />
+        </View>
 
-      <Text>Confirmar Senha</Text>
-      <TextInput secureTextEntry value={confirmarSenha} onChangeText={setConfirmarSenha} />
+        <View>
+          <S.Label>Senha</S.Label>
+          <S.Input secureTextEntry value={senha} onChangeText={setSenha} />
+        </View>
 
-      <Text>CEP</Text>
-      <TextInput value={cep} onChangeText={handleCEPChange} />
+        <View>
+          <S.Label>Confirmar Senha</S.Label>
+          <S.Input secureTextEntry value={confirmarSenha} onChangeText={setConfirmarSenha} />
+        </View>
 
-      <Text>Endereço</Text>
-      <TextInput value={endereco} editable={false} placeholder='Endereço' />
+        <View>
+          <S.Label>CEP</S.Label>
+          <S.Input value={cep} onChangeText={handleCEPChange} />
+        </View>
 
-      <Text>Número</Text>
-      <TextInput value={numero} onChangeText={setNumero} />
+        <View>
+          <S.Label>Endereço</S.Label>
+          <S.Input value={endereco} editable={false} placeholder='Endereço' />
+        </View>
 
-      <Button title="Cadastrar" onPress={handleSubmit} />
-    </View>
+        <View>
+          <S.Label>Número</S.Label>
+          <S.Input value={numero} onChangeText={setNumero} />
+        </View>
+
+        <S.Button title="Cadastrar" onPress={handleSubmit}>
+          <S.MyText $bold>Confirmar</S.MyText>
+        </S.Button>
+
+        <S.Button title="Entrar" onPress={() => navigation.navigate('login')}>
+          <S.MyText $bold>Entrar</S.MyText>
+        </S.Button>
+      </S.Container>
+    </ScrollView>
   );
 };

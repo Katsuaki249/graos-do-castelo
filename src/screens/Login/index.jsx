@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Text, Image } from 'react-native'
 
+import { useNavigation } from '@react-navigation/native'
+
 import {
   Container,
   Logo,
@@ -11,7 +13,10 @@ import {
   MyText,
 } from './styles'
 
-export default function Login({ navigation, atualizarEstado }) {
+export default function Login({ atualizarEstado }) {
+
+  const navigation = useNavigation()
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [loggedIn, setLoggedIn] = useState(false)

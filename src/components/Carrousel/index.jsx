@@ -1,5 +1,5 @@
 import { FlatList } from 'react-native-gesture-handler'
-
+import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import * as S from './styles'
 
@@ -24,7 +24,7 @@ const data = [
     subtitle: 'Economize enquanto cuida de sua saúde',
     buttonText: 'Faça seu cadastro',
     image: require('../../assets/images/banner-img-2.png'),
-    route: 'acount',
+    route: 'register',
     badgeColor: '#397e01',
     titleColor: '#ff5800',
     subtitleColor: '#ffffff',
@@ -32,7 +32,9 @@ const data = [
   },
 ]
 
-const Carousel = ({ navigation }) => {
+export default function Carousel() {
+  const navigation = useNavigation()
+
   return (
     <FlatList
       data={data}
@@ -79,5 +81,3 @@ const Carousel = ({ navigation }) => {
     />
   )
 }
-
-export default Carousel

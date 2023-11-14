@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components/native'
 
 export const Container = styled.View`
+  padding: 20px 0;
   flex: 1;
   justify-content: center;
   align-items: center;
 `
 
 export const Label = styled.Text<{ $orange?: boolean }>`
+  padding-top: 10px;
   align-self: flex-start;
   font-size: 16px;
   color: #397e01;
@@ -48,10 +50,10 @@ export const Input = styled.TextInput`
   border: 2px solid #d9d9d9;
 `
 
-export const Button = styled.TouchableOpacity`
+export const Button = styled.TouchableOpacity<{ $orange?: boolean }>`
   margin-top: 10px;
   width: 300px;
   padding: 10px 10px;
-  background-color: #397e01;
+  background-color: ${(props) => (props.$orange ? '#ff5800' : '#397e01')};
   border-radius: 6px;
 `

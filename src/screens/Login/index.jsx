@@ -66,8 +66,9 @@ export default function Login({ atualizarEstado }) {
       )}
       {loggedIn && <Text>Logado com sucesso!</Text>}
 
-      <Button onPress={() => navigation.navigate('register')}>
-        <MyText>Cadastrar</MyText>
+      <MyText style={{paddingTop: 15, fontSize: 16}} $dark>Não possui uma conta?</MyText>
+      <Button $orange onPress={() => navigation.navigate('register')}>
+        <MyText $bold>Cadastrar</MyText>
       </Button>
     </Container>
   )

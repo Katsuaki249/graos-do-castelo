@@ -60,10 +60,10 @@ export const Input = styled.TextInput`
   border: 2px solid #d9d9d9;
 `
 
-export const Button = styled.TouchableOpacity`
+export const Button = styled.TouchableOpacity<{ $orange?: boolean }>`
   margin-top: 10px;
   width: 300px;
   padding: 10px 10px;
-  background-color: #397e01;
+  background-color: ${(props) => (props.$orange ? '#ff5800' : '#397e01')};
   border-radius: 6px;
 `

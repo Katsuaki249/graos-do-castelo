@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb+srv://admin:LlpehAN3I1IqRXE5@graosdocastelo.mmjgizl.mongodb.net/?retryWrites=true&w=majority';
+const url = process.env.MONGODB_DATABASE_URL;
 
 async function main() {
   try {
@@ -12,5 +12,3 @@ async function main() {
 }
 
 module.exports = main;
-
-//LlpehAN3I1IqRXE5

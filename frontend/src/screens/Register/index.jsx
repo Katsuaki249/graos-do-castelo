@@ -44,6 +44,10 @@ export default Register = () => {
     console.log('Número:', numero);
   };
 
+  // const userRegister = async (nome, sobrenome, email, senha, endereco, numero) {
+  //   try {}
+  // }
+
   return (
     <ScrollView>
 

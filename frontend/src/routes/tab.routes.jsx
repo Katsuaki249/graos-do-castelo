@@ -5,15 +5,12 @@ import Home from '../screens/Home'
 import Store from '../screens/Store'
 import Cart from '../screens/Cart'
 
-import { getCart } from '../screens/Cart'
-
 import { Feather } from '@expo/vector-icons'
 
 const Tab = createBottomTabNavigator()
 
 
 export default function TabRoutes() {
-  const cart = getCart()
 
   return(
     <Tab.Navigator
@@ -67,7 +64,7 @@ export default function TabRoutes() {
           tabBarIcon: ({ size, color }) => (
             <Feather name='shopping-cart' size={size} color={color} />
           ),
-          tabBarBadge: [cart],
+          tabBarBadge: [5],
           tabBarBadgeStyle: {
             backgroundColor: '#FF5800'
           }

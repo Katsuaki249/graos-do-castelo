@@ -4,10 +4,11 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Acount from '../screens/Acount'
 import Login from '../screens/Login'
 import Register from '../screens/Register'
+import Payment from '../screens/Payment'
 
 const Stack = createStackNavigator()
 
-export default function StackRoutes({navigation}) {
+export default function StackRoutes() {
 
   const [ meuEstado, setMeuEstado ] = useState(false)
 
@@ -39,7 +40,13 @@ export default function StackRoutes({navigation}) {
       <Stack.Screen
         name='register'
         options={{title: 'register'}}
-        children={() => <Register navigation={navigation} />}
+        children={() => <Register />}
+      />
+
+      <Stack.Screen
+        name='payment'
+        options={{title: 'payment'}}
+        children={() => <Payment />}
       />
     </Stack.Navigator>
   )

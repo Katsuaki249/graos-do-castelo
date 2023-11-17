@@ -77,9 +77,10 @@ const data = [
   }
 ]
 
-export const numColumns = 2
 
 export default function Store() {
+
+  const numColumns = 2
 
   return(
     <Container>

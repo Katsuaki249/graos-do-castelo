@@ -96,7 +96,6 @@ export default Register = () => {
           <S.MyText $bold>Confirmar</S.MyText>
         </S.Button>
 
-
         <S.MyText style={{paddingTop: 15, fontSize: 16}} $dark>Já possui uma conta?</S.MyText>
         <S.Button $orange title="Entrar" onPress={() => navigation.navigate('login')}>
           <S.MyText $bold>Entrar</S.MyText>

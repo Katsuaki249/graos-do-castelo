@@ -5,6 +5,7 @@ import TabRoutes from "./tab.routes";
 import StackRoutes from "./stack.routes";
 import About from '../screens/About'
 import Config from "../screens/Config";
+import Payment from '../screens/Payment'
 
 const Drawer = createDrawerNavigator()
 
@@ -46,6 +47,14 @@ export default function DrawerRoutes() {
         options={{
           drawerIcon: ({color, size}) => <Feather name="settings" color={color} size={size} />,
           drawerLabel: 'Configurações'
+        }}
+      />
+      <Drawer.Screen
+        name="payment"
+        component={Payment}
+        options={{
+          drawerIcon: ({color, size}) => <Feather name="dollar-sign" color={color} size={size} />,
+          drawerLabel: 'Pagamentos'
         }}
       />
     </Drawer.Navigator>
